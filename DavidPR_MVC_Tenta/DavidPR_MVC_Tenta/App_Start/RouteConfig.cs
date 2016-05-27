@@ -14,6 +14,11 @@ namespace DavidPR_MVC_Tenta
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "SpriteRout",
+                url: "Sprite/{action}/{id}",
+                defaults: new { controller = "Sprite", action = "Hexa", id = UrlParameter.Optional }
+            );
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
